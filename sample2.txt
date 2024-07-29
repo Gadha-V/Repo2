@@ -70,13 +70,13 @@ export class PasswordComponent
       this.match=false;
     }
   }
-   if (strcmp(entered_password, correct_password) == 0) {
+
         printf("Access granted.\n");
     } else {
         printf("Access denied.\n");
     }
  
     return 0;
-}
+
 
 }
