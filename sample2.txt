@@ -1,0 +1,65 @@
+import { Component, numberAttribute } from '@angular/core';
+
+@Component({
+  selector: 'app-password',
+  templateUrl: './password.component.html',
+  styleUrl: './password.component.css'
+})
+export class PasswordComponent 
+{
+
+  pass='';
+  Confirm='';
+  strong: boolean=false;
+  match:boolean=false;
+  i :number=0;
+  count:number=0;
+  count1:number=0;
+  count2:number=0;
+  char :string='';
+  value()
+  {
+    if(this.pass.length>8)
+    {
+      for(this.i=0;this.i<this.pass.length;this.i++)
+      {
+        this.char=this.pass.charAt(this.i);
+        if(this.char>='0' && this.char<='9')
+        {
+          this.count=this.count+1;
+        }
+        if(this.char>='a' && this.char<='z')
+        {
+          this.count1=this.count1+1;
+        }
+        if(this.char>='A' && this.char<='Z')
+        {
+          this.count2=this.count2+1;
+        }
+                
+      }
+      if(this.count>0 && this.count1>10 && this.count2>0)
+      {
+        this.strong=true;
+      }
+      else
+      {
+        this.strong=false;
+      }
+
+    }
+  }
+  check(a:string,b:string)
+  {
+    if(a==b) 
+    {
+      this.match=true;
+    }
+    else
+    {
+      this.match=false;
+    }
+  }
+
+
+}
