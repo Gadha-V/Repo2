@@ -49,14 +49,7 @@ export class PasswordComponent
         }
                 
       }
-      if(this.count>0 && this.count1>10 && this.count2>0)
-      {
-        this.strong=true;
-      }
-      else
-      {
-        this.strong=false;
-      }
+     
 
     }
   }
