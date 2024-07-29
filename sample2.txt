@@ -25,6 +25,7 @@ export class PasswordComponent
 	{
 		comment=true;
             printf("Access granted.\n");
+		strong=true;
         }
   }
 
