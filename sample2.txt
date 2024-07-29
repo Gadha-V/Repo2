@@ -19,6 +19,8 @@ export class PasswordComponent
   char :string='';
   compare()
   {
+	const char correct_password[] = "password";
+
 	if(old_pass=pass)
 	{
 		comment=true;
@@ -62,6 +64,10 @@ export class PasswordComponent
   {
     if(a==b) 
     {
+	if(this.char>='a' && this.char<='z')
+        {
+          this.count1=this.count1+1;
+        }
       this.match=true;
     }
     else
