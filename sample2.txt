@@ -7,7 +7,7 @@ import { Component, numberAttribute } from '@angular/core';
 })
 export class PasswordComponent 
 {
-  old _pass="hello";
+  
   comment :boolean=false;
   pass='';
   Confirm='';
